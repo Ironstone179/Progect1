@@ -1,0 +1,9 @@
+body{
+background-color:black;
+}
+.question{
+ border: double green;
+margin: auto;
+padding: 2px;
+width: 10%;
+}
