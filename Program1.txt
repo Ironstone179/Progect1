@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x, y;
+            Console.WriteLine("Write x");
+            x = Convert.ToDouble(Console.ReadLine());
+            {
+                if (x < -0.5)
+                {
+                    if (x <= 0)
+                    {
+                        y = x + 1;
+                    }
+                    else
+                    {
+                        if (x <= -0.5)
+                        {
+                            y = 0.5;
+                        }
+                        else
+
+
+                        if (x <= 1)
+                        {
+                            if (x < 0)
+                            {
+                                y = x * x - 1;
+                            }
+                            else
+                            {
+                                if (x > 1)
+                                {
+                                    y = x - 1;
+                                }
+                                else
+                                Console.WriteLine("y=");
+                                Console.WriteLine(y);
+                                Console.ReadKey();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
