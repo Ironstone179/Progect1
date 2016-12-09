@@ -1,23 +1,25 @@
 <html>
 <body>
 <svg width="1000" height="800">
-<rect width="1000" height="400" fill="skyblue"/>
+<rect id="sky" width="1000" height="400" fill="skyblue"/>
 
-<polygon points="500 400, 0 400, 0 300" fill="yellow" fill-opacity=".7"/>
-<polygon points="500 400, 900 0, 1000 0 1000 100" fill="yellow" fill-opacity=".7"/>
-<polygon points="500 400, 0 100, 0 0, 100 0" fill="yellow" fill-opacity=".7"/>
-<polygon points="500 400, 400 0, 600 0" fill="yellow" fill-opacity=".7"/>
-<polygon points="500 400, 1000 400, 1000 300" fill="yellow" fill-opacity=".7"/>
+<path id="sun1" d = "M 0, 0 L 0, -1400" fill-opacity=".9" />
+<g id="sun">
+<circle cx="500" cy="550" r="150" fill="yellow"/>
+<circle cx="500" cy="1250" r="70" fill="lightgray"/>
+    <animateMotion dur="20s" repeatCount="indefinite">
+      <mpath xlink:href="#sun1"/>
+    </animateMotion>
+</g>
 
-<circle cx="500" cy="400" r="200" fill="yellow"/>
-<rect width="1000" height="400" y="400" fill="steelblue"/>
+<rect id="sea" width="1000" height="400" y="400" fill="steelblue"/>
 
-<path id="line1" d = "M -1000, 50 L 2000, 50" fill-opacity=".9" />
+<path id="line1" d = "M -1000, 50 L 2000, 100" fill-opacity=".9" />
 <g id="c1">
-<ellipse cx="200" cy="150" rx="60" ry="50" fill="white"/>
-<ellipse cx="160" cy="170" rx="80" ry="50" fill="white"/>
-<ellipse cx="240" cy="170" rx="80" ry="50" fill="white"/>
-<ellipse cx="200" cy="200" rx="150" ry="45" fill="white"/>
+<ellipse id="1" cx="200" cy="150" rx="60" ry="50" fill="white"/>
+<ellipse id="2" cx="160" cy="170" rx="80" ry="50" fill="white"/>
+<ellipse id="3" cx="240" cy="170" rx="80" ry="50" fill="white"/>
+<ellipse id="4" cx="200" cy="200" rx="150" ry="45" fill="white"/>
     <animateMotion dur="12s" repeatCount="indefinite">
       <mpath xlink:href="#line1"/>
     </animateMotion>
@@ -26,11 +28,11 @@
 
 <path id="line2" d = "M -1000, 0 L 2000, 0" fill-opacity=".9" />
 <g id="c2">
-<ellipse cx="400" cy="140" rx="60" ry="50" fill="white"/>
-<ellipse cx="360" cy="160" rx="80" ry="50" fill="white"/>
-<ellipse cx="440" cy="160" rx="80" ry="50" fill="white"/>
-<ellipse cx="400" cy="190" rx="150" ry="45" fill="white"/>
-<animateMotion dur="11s" repeatCount="indefinite">
+<ellipse id="5" cx="400" cy="140" rx="60" ry="50" fill="white"/>
+<ellipse id="6" cx="360" cy="160" rx="80" ry="50" fill="white"/>
+<ellipse id="7" cx="440" cy="160" rx="80" ry="50" fill="white"/>
+<ellipse id="8" cx="400" cy="190" rx="150" ry="45" fill="white"/>
+<animateMotion dur="12s" repeatCount="indefinite">
       <mpath xlink:href="#line2"/>
     </animateMotion>
 
@@ -38,42 +40,126 @@
 
 <path id="line3" d = "M -1000, -10 L 2000, -10" fill-opacity=".9" />
 <g id="c3">
-<ellipse cx="700" cy="250" rx="60" ry="50" fill="white"/>
-<ellipse cx="660" cy="270" rx="80" ry="50" fill="white"/>
-<ellipse cx="740" cy="270" rx="80" ry="50" fill="white"/>
-<ellipse cx="700" cy="300" rx="150" ry="45" fill="white"/>
+<ellipse id="9" cx="700" cy="250" rx="60" ry="50" fill="white"/>
+<ellipse id="10" cx="660" cy="270" rx="80" ry="50" fill="white"/>
+<ellipse id="11" cx="740" cy="270" rx="80" ry="50" fill="white"/>
+<ellipse id="12" cx="700" cy="300" rx="150" ry="45" fill="white"/>
 <animateMotion dur="10s" repeatCount="indefinite">
       <mpath xlink:href="#line3"/>
     </animateMotion>
 
 </g>
 
-<path id="line4" d = "M -1000, -100 L 2000, -100" fill-opacity=".9" />
+<path id="line4" d = "M -2000, -100 L 2000, -100" fill-opacity=".9" />
 <g id="c4">
-<ellipse cx="900" cy="50" rx="80" ry="50" fill="white"/>
-<ellipse cx="860" cy="70" rx="100" ry="50" fill="white"/>
-<ellipse cx="940" cy="70" rx="100" ry="50" fill="white"/>
-<ellipse cx="900" cy="100" rx="170" ry="45" fill="white"/>
+<ellipse id="13" cx="900" cy="50" rx="80" ry="50" fill="white"/>
+<ellipse id="14" cx="860" cy="70" rx="100" ry="50" fill="white"/>
+<ellipse id="15" cx="940" cy="70" rx="100" ry="50" fill="white"/>
+<ellipse id="16" cx="900" cy="100" rx="170" ry="45" fill="white"/>
 <animateMotion dur="13s" repeatCount="indefinite">
       <mpath xlink:href="#line4"/>
     </animateMotion>
 
 </g>
 
-<rect width="1000" height="150" y="650" fill="darkgray"/>
+<rect id="ground" width="1000" height="150" y="650" fill="darkgray"/>
 
-<rect width="30" height="100" y="550" x="50" fill="gray" stroke="black"/>
-<rect width="30" height="100" y="550" x="150" fill="gray" stroke="black"/>
-<rect width="30" height="100" y="550" x="250" fill="gray" stroke="black"/>
-<rect width="30" height="100" y="550" x="350" fill="gray" stroke="black"/>
-<rect width="30" height="100" y="550" x="450" fill="gray" stroke="black"/>
-<rect width="30" height="100" y="550" x="550" fill="gray" stroke="black"/>
-<rect width="30" height="100" y="550" x="650" fill="gray" stroke="black"/>
-<rect width="30" height="100" y="550" x="750" fill="gray" stroke="black"/>
-<rect width="30" height="100" y="550" x="850" fill="gray" stroke="black"/>
-<rect width="30" height="100" y="550" x="950" fill="gray" stroke="black"/>
-<rect width="1000" height="40" y="650" fill="gray" stroke="black"/>
-<rect width="1000" height="20" y="550" fill="gray" stroke="black"/>
+<rect id="g1" width="30" height="100" y="550" x="50" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g1"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g2" width="30" height="100" y="550" x="150" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g2"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g3" width="30" height="100" y="550" x="250" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g3"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g4" width="30" height="100" y="550" x="350" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g4"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g5" width="30" height="100" y="550" x="450" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g5"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g6" width="30" height="100" y="550" x="550" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g6"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g7" width="30" height="100" y="550" x="650" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g7"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g8" width="30" height="100" y="550" x="750" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g8"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g9" width="30" height="100" y="550" x="850" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g9"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g10" width="30" height="100" y="550" x="950" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g10"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g11" width="1000" height="40" y="650" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g11"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<rect id="g12" width="1000" height="20" y="550" fill="gray" stroke="black"/>
+<animate 
+           xlink:href="#g12"
+           attributeName="fill"
+           values="Gray;DarkGray;Gray;DimGray;Gray"
+           dur="20s"
+           repeatCount="indefinite"
+/>
 
 <line x1="370" y1="510" x2="330" y2="510" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
 <line x1="370" y1="513" x2="335" y2="520" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
@@ -85,16 +171,16 @@
 
 <path id="line5" d = "M 1000, -40 L -1000, -40" fill-opacity=".9" />
 <g id="c5">
-<polygon points="500 450, 540 475, 600 475, 625 450, 595 450, 595 430, 540 430, 540 450" fill="white"/>
-<rect width="10" height="20" y="410" x="545"/>
+<polygon points="500 450, 540 475, 600 475, 625 450, 595 450, 595 430, 540 430, 540 450" fill="white" stroke="black"/>
+<rect width="10" height="20" y="410" x="545" stroke="black"/>
 <line x1="545" y1="415" x2="555" y2="415" style="stroke:yellow; stroke-width:2"/>
-<circle cx="585" cy="440" r="5" fill="blue"/>
+<circle id="i1" cx="585" cy="440" r="5" fill="blue" stroke="black"/>
 <rect width="10" height="20" y="410" x="562"/>
 <line x1="562" y1="415" x2="572" y2="415" style="stroke:yellow; stroke-width:2"/>
-<circle cx="568" cy="440" r="5" fill="blue"/>
+<circle id="i2" cx="568" cy="440" r="5" fill="blue" stroke="black"/>
 <rect width="10" height="20" y="410" x="580"/>
 <line x1="580" y1="415" x2="590" y2="415" style="stroke:yellow; stroke-width:2"/>
-<circle cx="550" cy="440" r="5" fill="blue"/>
+<circle id="i3" cx="550" cy="440" r="5" fill="blue" stroke="black"/>
 <line x1="500" y1="450" x2="625" y2="450" style="stroke:red; stroke-width:2"/>
 <animateMotion dur="13s" repeatCount="indefinite">
       <mpath xlink:href="#line5"/>
@@ -102,20 +188,209 @@
 
 </g>
 
-<polygon points="350 490, 350 440, 378 465" fill="orange" stroke="black"/>
-<polygon points="440 440, 400 465, 428 490" fill="orange" stroke="black"/>
-<circle cx="390" cy="500" r="40" fill="orange" stroke="black"/>
-<ellipse cx="440" cy="540" rx="80" ry="40" fill="orange" stroke="black"/>
-
-<line x1="510" y1="540" x2="510" y2="630" style="stroke:orange; stroke-linecap:round; stroke-width:20">
+<polygon id="cat1" points="350 490, 350 440, 378 465" fill="orange" stroke="black"/>
+<polygon id="cat2" points="440 440, 400 465, 428 490" fill="orange" stroke="black"/>
+<circle id="cat3" cx="390" cy="500" r="40" fill="orange" stroke="black"/>
+<ellipse id="cat4" cx="440" cy="540" rx="80" ry="40" fill="orange" stroke="black"/>
+<line id="tail" x1="510" y1="540" x2="510" y2="630" style="stroke:orange; stroke-linecap:round; stroke-width:20">
 	  <animateTransform attributeType="xml"
                     attributeName="transform"
                     type="rotate"                    
-		    values="25 510 540;-25 510 540;25 510 540"
+		    values="15 510 540;-15 510 540;15 510 540"
                     dur="3s"
                     repeatCount="indefinite"/>
 </line>
 
+<animate 
+           xlink:href="#sky"
+           attributeName="fill"
+           values="SlateBlue;SkyBlue;SlateBlue;DarkSlateBlue;SlateBlue"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+
+<animate 
+           xlink:href="#sea"
+           attributeName="fill"
+           values="DarkSlateBlue;steelblue;DarkSlateBlue;midnightblue;DarkSlateBlue"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#cat1"
+           attributeName="fill"
+           values="DarkOrange;Orange;DarkOrange;Chocolate;DarkOrange"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#cat2"
+           attributeName="fill"
+           values="DarkOrange;Orange;DarkOrange;Chocolate;DarkOrange"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#cat3"
+           attributeName="fill"
+           values="DarkOrange;Orange;DarkOrange;Chocolate;DarkOrange"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#cat4"
+           attributeName="fill"
+           values="DarkOrange;Orange;DarkOrange;Chocolate;DarkOrange"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#ground"
+           attributeName="fill"
+           values="Silver;LightGrey;Silver;DarkGrey;Silver"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#tail"
+           attributeName="stroke"
+           values="DarkOrange;Orange;DarkOrange;Chocolate;DarkOrange"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#1"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#2"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#3"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#4"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#5"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#6"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#7"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#8"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#9"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#10"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#11"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#12"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#13"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#14"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#15"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#16"
+           attributeName="fill"
+           values="Snow;White;Snow;LightGrey;Snow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#i1"
+           attributeName="fill"
+           values="Yellow;Blue;Yellow;Yellow;Yellow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#i2"
+           attributeName="fill"
+           values="Yellow;Blue;Yellow;Yellow;Yellow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#i3"
+           attributeName="fill"
+           values="Yellow;Blue;Yellow;Yellow;Yellow"
+           dur="20s"
+           repeatCount="indefinite"
+/>
 </svg>
 </body>
 </html>
