@@ -6,7 +6,7 @@
 <polygon points="101 300, 50 400, 101 410" fill="mediumaquamarine"/>
 <line x1="130" y1="350" x2="100" y2="410" stroke="black" stroke-width="5"/>
 <line x1="270" y1="350" x2="299" y2="410" stroke="black" stroke-width="5"/>
- <circle cx="200" cy="190" r="150" fill="cornsilk"/> 
+ <circle cx="200" cy="190" r="150" fill="bisque"/> 
  <ellipse cx="160" cy="200" rx="40" ry="50" fill="white" transform='rotate(20 160 200)'/> 
  <ellipse cx="240" cy="200" rx="40" ry="50" fill="white" transform='rotate(-20 240 200)'/> 
  <circle cx="175" cy="200" r="5" fill="black"/> 
@@ -25,9 +25,10 @@
 <rect x="95" y="470" width="220" height="11" fill="white"/>
 <ellipse cx="200" cy="420" rx="100" ry="15" fill="mediumaquamarine"/>
 <line x1="200" y1="350" x2="200" y2="435" style="stroke-width:5; stroke:black"/>
- <circle cx="80" cy="400" r="30" fill="cornsilk"/> 
- <circle cx="320" cy="400" r="30" fill="cornsilk"/>  
- <line x1=">
+ <circle cx="80" cy="400" r="30" fill="bisque"/> 
+ <circle cx="320" cy="400" r="30" fill="bisque"/>  
+ <circle cx="100" cy="390" r="12" fill="bisque" stroke="BurlyWood"/> 
+ <circle cx="300" cy="390" r="12" fill="bisque" stroke="BurlyWood"/> 
 
 </svg>
 	 </body>
