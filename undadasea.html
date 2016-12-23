@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <body>
 <svg width="1000" height="800">
 <rect x="0" y="0" height="800" width="1000" fill="steelblue"/>
@@ -6,7 +6,7 @@
 <path id="line2" d = "M 1000, 0 L -1000, 0 Z 2000, 0 " fill-opacity=".9" />
 
 <g id="crab" transform="scale(0.6) translate(400 300)">
-	<ellipse cx="200" cy="770" rx="120" ry="35" fill="tan"/>
+<ellipse cx="200" cy="770" rx="120" ry="35" fill="tan"/>
 <ellipse cx="200" cy="700" rx="100" ry="50" fill="red" stroke="black"/>
 <circle cx="150" cy="650" r="29" fill="white" stroke="black"/>
 <circle cx="250" cy="650" r="29" fill="white" stroke="black"/>
@@ -87,9 +87,8 @@ repeatCount="indefinite"
 <polygon points="140 45, 100 140, 260 60" fill="mediumaquamarine"/>
 </g>
 
-<path id="line1" d = "M 2000, 0 L -2000, 0" fill-opacity=".9" />
 
-<g id="fish1">
+<g id="fish1" transform="translate(-800 200)">
 <polygon points="1100 100, 1180 125, 1180 75" fill="seagreen" stroke="black"/>
 <line x1="1100" x2="1180" y1="100" y2="85" stroke-width="2" stroke="mediumseagreen"/>
 <line x1="1100" x2="1180" y1="100" y2="95" stroke-width="2" stroke="mediumseagreen"/>
@@ -99,11 +98,10 @@ repeatCount="indefinite"
 <ellipse cx="1100" cy="100" rx="50" ry="25" fill="mediumseagreen" stroke="black"/>
 <circle cx="1062" cy="98" r="7" fill="white" stroke="black"/>
 <circle cx="1062" cy="98" r="2" fill="black"/>
-<animateMotion dur="10s" repeatCount="indefinite">
-      <mpath xlink:href="#line1"/>
-    </animateMotion>
+
 </g>
-<g id="fish2" transform="translate(0 200) scale(1.2)">
+
+<g id="fish2" transform="translate(-420 200) scale(1.2)">
 <polygon points="1100 100, 1180 125, 1180 75" fill="lightcoral" stroke="black"/>
 <line x1="1100" x2="1180" y1="100" y2="85" stroke-width="2" stroke="indianred"/>
 <line x1="1100" x2="1180" y1="100" y2="95" stroke-width="2" stroke="indianred"/>
@@ -113,10 +111,9 @@ repeatCount="indefinite"
 <ellipse cx="1100" cy="100" rx="50" ry="25" fill="indianred" stroke="black"/>
 <circle cx="1062" cy="98" r="7" fill="white" stroke="black"/>
 <circle cx="1062" cy="98" r="2" fill="black"/>
-<animateMotion dur="18s" repeatCount="indefinite">
-      <mpath xlink:href="#line1"/>
-    </animateMotion>
+
 </g>
+
 <g id="fish3" transform="translate(0 100) scale(0.8)">
 <polygon points="1100 100, 1180 125, 1180 75" fill="lightseagreen" stroke="black"/>
 <line x1="1100" x2="1180" y1="100" y2="85" stroke-width="2" stroke="darkcyan"/>
@@ -127,32 +124,20 @@ repeatCount="indefinite"
 <ellipse cx="1100" cy="100" rx="50" ry="25" fill="darkcyan" stroke="black"/>
 <circle cx="1062" cy="98" r="7" fill="white" stroke="black"/>
 <circle cx="1062" cy="98" r="2" fill="black"/>
-<animateMotion dur="16s" repeatCount="indefinite">
-      <mpath xlink:href="#line1"/>
-    </animateMotion>
+
 </g>
 
-<path id="line3" d = "M 2000, 0 L -2000, 0" fill-opacity=".9" />
+<use xlink:href="#fish1" x="0" y="300"/>
 
-<use xlink:href="#fish1" x="0" y="300">
-<animateMotion dur="14s" repeatCount="indefinite">
-      <mpath xlink:href="#line3"/>
-    </animateMotion>
-		</use>
-<use xlink:href="#fish2" x="0" y="200">
-<animateMotion dur="12s" repeatCount="indefinite">
-      <mpath xlink:href="#line3"/>
-    </animateMotion>
-		</use>
-<use xlink:href="#fish3" x="0" y="100">
-<animateMotion dur="10s" repeatCount="indefinite">
-      <mpath xlink:href="#line3"/>
-    </animateMotion>
-	</use>
+<use xlink:href="#fish2" x="0" y="200"/>
+
+<use xlink:href="#fish3" x="0" y="100"/>
+
 
 <ellipse cx="435" cy="700" rx="100" ry="20" fill="tan"/>
 <polygon transform="translate(90 400) scale(1.5)" id="coral" points="200 200, 200 150, 180 130, 180 58, 188 50, 202 50, 210 58, 210 115, 215 120, 220 120, 220 35, 225 25, 235 25, 240 35, 240 150, 230 150, 250 150, 250 90, 260 80, 270 80, 280 90, 280 170, 270 180, 248 180, 240 188, 240 200" fill="coral"/>
 <use xlink:href="#coral" x="800" y="450" transform="scale(0.7)"/>
+
 </svg>
 </body>
 </html>
