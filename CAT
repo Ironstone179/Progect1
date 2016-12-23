@@ -3,8 +3,28 @@
 <svg width="1000" height="800">
 <rect id="sky" width="1000" height="400" fill="skyblue"/>
 
+<polygon id="star" transform="scale(0.5) translate(100 50)" points="0 60, 30 45, 50 0, 70 45, 100 60, 70 75, 50 120, 30 75" fill="yellow"/>
+<animate 
+           xlink:href="#star"
+           attributeName="fill"
+           values="SlateBlue;SkyBlue;SlateBlue;yellow;SlateBlue"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<use transform="scale(0.9)" xlink:href="#star" x="120" y="100"/>
+<use transform="scale(0.8)" xlink:href="#star" x="200" y="0"/>
+<use xlink:href="#star" x="250" y="50"/>
+<use transform="scale(0.7)" xlink:href="#star" x="310" y="70"/>
+<use transform="scale(0.8)" xlink:href="#star" x="440" y="40"/>
+<use xlink:href="#star" x="700" y="110"/>
+<use transform="scale(0.9)" xlink:href="#star" x="726" y="200"/>
+<use transform="scale(0.8)" xlink:href="#star" x="620" y="-10"/>
+<use xlink:href="#star" x="790" y="0"/>
+<use transform="scale(0.7)" xlink:href="#star" x="800" y="60"/>
+<use transform="scale(0.8)" xlink:href="#star" x="900" y="30"/>
+
 <path id="sun1" d = "M 0, 0 L 0, -1400" fill-opacity=".9" />
-<g id="sun">
+<g id="sun" onclick="smth()">
 <circle cx="500" cy="550" r="150" fill="yellow"/>
 <circle cx="500" cy="1250" r="70" fill="lightgray"/>
     <animateMotion dur="20s" repeatCount="indefinite">
@@ -161,15 +181,7 @@
            repeatCount="indefinite"
 />
 
-<line x1="370" y1="510" x2="330" y2="510" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
-<line x1="370" y1="513" x2="335" y2="520" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
-<line x1="370" y1="507" x2="335" y2="500" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
-
-<line x1="455" y1="510" x2="410" y2="510" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
-<line x1="450" y1="520" x2="410" y2="513" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
-<line x1="450" y1="500" x2="410" y2="507" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
-
-<path id="line5" d = "M 1000, -40 L -1000, -40" fill-opacity=".9" />
+<path id="line5" d = "M 0, 0 L -800, 0 L -800, 40 L 800, 40 L 800, 0 L 0,0" fill-opacity=".9" fill="none"/>
 <g id="c5">
 <polygon points="500 450, 540 475, 600 475, 625 450, 595 450, 595 430, 540 430, 540 450" fill="white" stroke="black"/>
 <rect width="10" height="20" y="410" x="545" stroke="black"/>
@@ -182,27 +194,11 @@
 <line x1="580" y1="415" x2="590" y2="415" style="stroke:yellow; stroke-width:2"/>
 <circle id="i3" cx="550" cy="440" r="5" fill="blue" stroke="black"/>
 <line x1="500" y1="450" x2="625" y2="450" style="stroke:red; stroke-width:2"/>
-<animateMotion dur="13s" repeatCount="indefinite">
+<animateMotion begin="click" dur="14s" repeatCount="1">
       <mpath xlink:href="#line5"/>
     </animateMotion>
 
-</g>
-
-<polygon id="cat1" points="350 490, 350 440, 378 465" fill="orange" stroke="black"/>
-<polygon id="cat2" points="440 440, 400 465, 428 490" fill="orange" stroke="black"/>
-<circle id="cat3" cx="390" cy="500" r="40" fill="orange" stroke="black"/>
-<ellipse id="cat4" cx="440" cy="540" rx="80" ry="40" fill="orange" stroke="black"/>
-<line id="tail" x1="510" y1="540" x2="510" y2="630" style="stroke:orange; stroke-linecap:round; stroke-width:20">
-	  <animateTransform attributeType="xml"
-                    attributeName="transform"
-                    type="rotate"                    
-		    values="15 510 540;-15 510 540;15 510 540"
-                    dur="3s"
-                    repeatCount="indefinite"/>
-</line>
-
-
-<g id="butt" transform="scale(0.7) translate(800 550)">
+<g id="butt" transform="scale(0.05) translate(12000 8500)">
 <rect x="100" y="300" width="200" height="120" fill="mediumaquamarine"/>
 <polygon points="300 300, 350 400, 300 410" fill="mediumaquamarine"/>
 <polygon points="101 300, 50 400, 101 410" fill="mediumaquamarine"/>
@@ -213,16 +209,13 @@
 <ellipse cx="240" cy="200" rx="40" ry="50" fill="white" transform='rotate(-20 240 200)'/> 
 <circle cx="175" cy="200" r="5" fill="black"/> 
  <circle cx="225" cy="200" r="5" fill="black"/> 
-
 <path id="e1" d = "M 0,0  L 0, 50 0,0 0,-15 0,-10 0,-15" fill-opacity=".9" />
 <g id="eye1">
 <rect x="115" y="100" width="85" height="50" fill="bisque"/>
 <rect x="198" y="100" width="85" height="50" fill="bisque"/>
-
 <animateMotion dur="2s" repeatCount="indefinite">
       <mpath xlink:href="#e1"/>
     </animateMotion>
-
 </g>
 <path id="e2" d = "M 0,0  L 0, -50 0,0 0,15 0,10 0,15" fill-opacity=".9" />
 <g id="eye2">
@@ -233,8 +226,7 @@
       <mpath xlink:href="#e2"/>
     </animateMotion>
 </g>
-
-    <path fill="none" stroke="black" stroke-width="3" d="M175,300 C190,295 210,295 225, 305"/>
+<path fill="none" stroke="black" stroke-width="3" d="M175,300 C190,295 210,295 225, 305"/>
 <polygon points="200 90, 320 130, 250 50" fill="yellow"/>
 <polygon points="200 90, 340 90, 250 30" fill="yellow"/>
 <polygon points="160 45, 300 10, 250 60" fill="yellow"/>
@@ -255,8 +247,45 @@
  <circle cx="100" cy="390" r="12" fill="bisque" stroke="BurlyWood"/> 
  <circle cx="300" cy="390" r="12" fill="bisque" stroke="BurlyWood"/> 
 </g>
+</g>
 
+<g id="headc">
+<line x1="370" y1="510" x2="330" y2="510" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
+<line x1="370" y1="513" x2="335" y2="520" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
+<line x1="370" y1="507" x2="335" y2="500" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
+<line x1="455" y1="510" x2="410" y2="510" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
+<line x1="450" y1="520" x2="410" y2="513" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
+<line x1="450" y1="500" x2="410" y2="507" style="stroke:black; stroke-linecap:round; stroke-width:2"/>
+<polygon id="cat1" points="350 490, 350 440, 378 465" fill="orange" stroke="black"/>
+<polygon id="cat2" points="440 440, 400 465, 428 490" fill="orange" stroke="black"/>
+<circle id="cat3" cx="390" cy="500" r="40" fill="orange" stroke="black"/>
+<animateTransform attributeType="xml"
+                    attributeName="transform"
+					begin="click"
+                    type="rotate"                    
+					values="0 390 500; 15 390 500;-15 390 500;0 390 500"
+                    dur="2s"
+                    repeatCount="2"/>
+</g>
 
+<ellipse id="cat4" cx="440" cy="540" rx="80" ry="40" fill="orange" stroke="black"/>
+
+<line id="tail" x1="510" y1="540" x2="510" y2="630" style="stroke:orange; stroke-linecap:round; stroke-width:20">
+	  <animateTransform attributeType="xml"
+                    attributeName="transform"
+                    type="rotate"                    
+		    values="15 510 540;-15 510 540;15 510 540"
+                    dur="3s"
+                    repeatCount="indefinite"/>
+					
+	<animateTransform attributeType="xml"
+                    attributeName="transform"
+                    type="rotate"  
+					begin="click"					
+		    values="0 510 540; -200 510 540; -160 510 540; -200 510 540; -160 510 540; -200 510 540; -160 510 540; 0 510 540"
+                    dur="7s"
+                    repeatCount=""/>
+</line>
 
 
 
@@ -455,7 +484,7 @@
            attributeName="fill"
            values="Yellow;Blue;Yellow;Yellow;Yellow"
            dur="20s"
-           repeatCount="indefinite
+           repeatCount="indefinite"
 
 />
 
