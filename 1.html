@@ -1,28 +1,159 @@
 <html>
- <title>
-   Very original title
- </title> 
  <body>
-  <center> <b> Hello, </b> <i> World </i>! </center>
-  Top 5 numbers
-   <ol>
-     <li> 5
-   <li> 4
-  <li> 3 
- <li> 2
-<li> 1
-   </ol>
-  <table border="1">
-    <tr>
-  <td> First name </td>
-  <td> Last name </td>
-    </tr>
-<td>
-Useless list
-   <ul>
-    <li> Pointless thing 1
-    <li> Pointless thing 2
-   </ul>
-</td>
+  <svg width="1000" height="800">
+ <rect id="sky" width="1000" height="400" fill="skyblue"/>
+
+ <path id="sun1" d = "M 0, 0 L 0, -1400" fill-opacity=".9" />
+<g id="sun">
+<circle cx="180" cy="400" r="130" fill="yellow"/>
+<circle cx="820" cy="400" r="50" fill="lightgray"/>
+	<animateTransform attributeType="xml" 
+	attributeName= "transform" type="rotate" 
+	values="-180 500 400; 180 500 400" 
+	dur="20s" 
+	repeatCount="indefinite"/>
+</g>
+ 
+<path id="cl" d = "M 1200, 0 L -1200, 0" fill-opacity=".9" />
+<g id="cloud1">
+<ellipse cx="80" cy="100" rx="70" ry="60" fill="white"/>
+<ellipse cx="100" cy="120" rx="120" ry="50" fill="white"/>
+<ellipse cx="130" cy="90" rx="60" ry="50" fill="white"/>
+<animateMotion dur="13s" repeatCount="indefinite">
+<mpath xlink:href="#cl"/>
+</animateMotion> 
+</g>
+<g id="cloud2" transform="translate(200 100)">
+<ellipse cx="80" cy="100" rx="70" ry="60" fill="white"/>
+<ellipse cx="100" cy="120" rx="120" ry="50" fill="white"/>
+<ellipse cx="130" cy="90" rx="60" ry="50" fill="white"/>
+<animateMotion dur="14s" repeatCount="indefinite">
+<mpath xlink:href="#cl"/>
+</animateMotion> 
+</g>
+<g id="cloud3" transform="translate(300 200)">
+<ellipse cx="80" cy="100" rx="70" ry="60" fill="white"/>
+<ellipse cx="100" cy="120" rx="120" ry="50" fill="white"/>
+<ellipse cx="130" cy="90" rx="60" ry="50" fill="white"/>
+<animateMotion dur="12s" repeatCount="indefinite">
+<mpath xlink:href="#cl"/>
+</animateMotion> 
+</g>
+
+<rect id="sea" width="1000" height="400" y="400" fill="steelblue"/>
+
+<path id="line1" d = "M -1000, 50 L 2000, 100" fill-opacity=".9" />
+
+
+<animate 
+           xlink:href="#sky"
+           attributeName="fill"
+           values="SlateBlue;DarkSlateBlue;SlateBlue;SkyBlue;SlateBlue"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+
+<animate 
+           xlink:href="#sea"
+           attributeName="fill"
+           values="DarkSlateBlue;midnightblue;DarkSlateBlue;steelblue;DarkSlateBlue"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+
+<path id="l2" d = "M 1400, 0 L -400, 0" fill-opacity=".9" /> 
+<g id="ship" transform="translate(0 100)">
+<path id="l1" d = "M 0, 0 L 15, -120" fill-opacity=".9" />
+<g id="smoke1">
+<circle id="c1" cx="176" cy="342" r="12" fill="black"/> 
+<circle id="c1" cx="175" cy="354" r="11" fill="black"/> 
+<circle id="c1" cx="174" cy="365" r="10" fill="black"/> 
+<circle id="c1" cx="173" cy="375" r="9" fill="black"/> 
+<circle id="c1" cx="172" cy="384" r="8" fill="black"/> 
+<animateMotion dur="4s" repeatCount="indefinite">
+<mpath xlink:href="#l1"/>
+</animateMotion> 
+</g>
+<g id="smoke2">
+<circle id="c1" cx="126" cy="342" r="12" fill="black"/> 
+<circle id="c1" cx="125" cy="354" r="11" fill="black"/> 
+<circle id="c1" cx="124" cy="365" r="10" fill="black"/> 
+<circle id="c1" cx="123" cy="375" r="9" fill="black"/> 
+<circle id="c1" cx="122" cy="384" r="8" fill="black"/> 
+<animateMotion dur="4s" repeatCount="indefinite">
+<mpath xlink:href="#l1"/>
+</animateMotion> 
+</g>
+<g id="smoke3">
+<circle id="c1" cx="76" cy="342" r="12" fill="black"/> 
+<circle id="c1" cx="75" cy="354" r="11" fill="black"/> 
+<circle id="c1" cx="74" cy="365" r="10" fill="black"/> 
+<circle id="c1" cx="73" cy="375" r="9" fill="black"/> 
+<circle id="c1" cx="72" cy="384" r="8" fill="black"/> 
+<animateMotion dur="4s" repeatCount="indefinite">
+<mpath xlink:href="#l1"/>
+</animateMotion> 
+</g>
+<rect x="35" y="360" width="170" height="40" fill="white" stroke="black"/>
+<polygon points = "0 390, 0 400, 30 435, 50 450, 200 450, 205 445, 210 435, 215 425, 220 400, 220 395, 190 395, 180 400, 50 400, 40 390" fill="white" stroke="black"/>
+<rect x="216" y="350" width="40" height="20" fill="steelblue" stroke="black"/>
+<line x1="216" x2="256" y1="350" y2 ="370" stroke-width="2" stroke="white"/>
+<line x1="216" x2="256" y1="370" y2 ="350" stroke-width="2" stroke="white"/>
+<line x1="215" y1="395" x2="215" y2="350" stroke-width="2" stroke="black"/>
+<rect x="165" y="310" width="25" height="50" fill="black"/>
+<line x1="165" x2="190" y1="315" y2="315" stroke-width="2" stroke="yellow"/>
+<line x1="165" x2="190" y1="320" y2="320" stroke-width="2" stroke="yellow"/>
+<rect x="115" y="310" width="25" height="50" fill="black"/>
+<line x1="115" x2="140" y1="315" y2="315" stroke-width="2" stroke="yellow"/>
+<line x1="115" x2="140" y1="320" y2="320" stroke-width="2" stroke="yellow"/>
+<rect x="65" y="310" width="25" height="50" fill="black"/> 
+<line x1="65" x2="90" y1="315" y2="315" stroke-width="2" stroke="yellow"/>
+<line x1="65" x2="90" y1="320" y2="320" stroke-width="2" stroke="yellow"/>
+<circle id="w1" cx="58" cy="383" r="8" fill="skyblue" stroke="black"/>
+<use xlink:href="#w1" x="30" y="0"/>
+<use xlink:href="#w1" x="60" y="0"/>
+<use xlink:href="#w1" x="90" y="0"/>
+<use xlink:href="#w1" x="120" y="0"/>
+<use xlink:href="#w1" x="14" y="32"/>
+<use xlink:href="#w1" x="44" y="32"/>
+<use xlink:href="#w1" x="74" y="32"/>
+<use xlink:href="#w1" x="104" y="32"/>
+
+<polyline points="220 395, 190 395, 180 400, 50 400, 40 390, 0 390" stroke-width="4" stroke="red" fill="none"/>
+<animateMotion dur="10s" repeatCount="indefinite">
+<mpath xlink:href="#l2"/>
+</animateMotion> 
+</g> 
+
+<animate 
+           xlink:href="#w1"
+           attributeName="fill"
+           values="skyblue;yellow;skyblue;blue;skyblue"
+           dur="20s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#smoke1"
+           attributeName="fill-opacity"
+           values="1;0"
+           dur="4s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#smoke2"
+           attributeName="fill-opacity"
+           values="1;0"
+           dur="4s"
+           repeatCount="indefinite"
+/>
+<animate 
+           xlink:href="#smoke3"
+           attributeName="fill-opacity"
+           values="1;0"
+           dur="4s"
+           repeatCount="indefinite"
+/>
+
+ </svg>
  </body>
 </html>
